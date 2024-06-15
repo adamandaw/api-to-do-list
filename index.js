@@ -1,6 +1,5 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const cors = require('cors');
 const mongoose = require('mongoose');
 const dotenv=require('dotenv');
 
@@ -25,12 +24,11 @@ mongoose.connect(process.env.DB_URL, {
     console.error('MongoDB connection error:', err);
 });
 
-app.use(cors());
 app.use(bodyParser.json());
 app.use('/api/v1', tacheRoutes);
 
 
 // Lancer le serveur
 app.listen(port, () => {
-    console.log(`Serveur démarré sur http://localhost:${port}`);
+    console.log(`Serveur démarrérr sur le port : ${port}`);
 });
