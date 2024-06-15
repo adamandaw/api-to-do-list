@@ -27,7 +27,7 @@ mongoose.connect(process.env.DB_URL, {
 
 app.use(cors());
 app.use(bodyParser.json());
-app.use('/api', tacheRoutes);
+app.use('/api/v1', tacheRoutes);
 
 
 // Lancer le serveur
