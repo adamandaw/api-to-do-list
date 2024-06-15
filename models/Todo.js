@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const tacheSchema = new mongoose.Schema({
+const todoSchema = new mongoose.Schema({
     title: {
         type: String,
         required: true
@@ -14,5 +14,5 @@ const tacheSchema = new mongoose.Schema({
 
 })
 
-const Tache = mongoose.model('Tache', tacheSchema);
+const Tache = mongoose.model('Tache', todoSchema);
 module.exports = Tache;

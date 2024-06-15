@@ -1,4 +1,4 @@
-const Tache = require("../models/Tache");
+const Tache = require("../models/Todo");
 
 exports.createTache = async (req, res) => {
     try {

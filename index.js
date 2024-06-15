@@ -9,7 +9,7 @@ const app = express();
 const port = 9003;
 dotenv.config({path:'./.env'});
 
-const tacheRoutes = require('./routes/tacheRoutes');
+const toDoTouter = require('./routes/TodoRouter');
 
 
 
@@ -25,7 +25,7 @@ mongoose.connect(process.env.DB_URL, {
 });
 
 app.use(bodyParser.json());
-app.use('/api/v1', tacheRoutes);
+app.use('/api/v1', toDoTouter);
 
 
 // Lancer le serveur
